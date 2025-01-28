@@ -44,3 +44,20 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+button:active {
+    background: #004085;
+}
+
+input[type="time"] {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+button.selected {
+    background: #28a745;
+}
+
+button.selected:hover {
+    background: #218838;
+}
