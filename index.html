@@ -1,186 +1,373 @@
-<!-- Day 0 -->
-<div class="day" id="day0">
-    <h2>Day 0: 22nd Feb 2025</h2>
-    
-    <div class="task" id="task0">
-        <div class="info">
-            <p>Flight Departure from Mumbai</p>
-            <strong>Time: </strong><input type="time" id="time0">
-            <strong>Flight Details: </strong><input type="text" id="flightDetails0" placeholder="Enter flight details">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Trip Itinerary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bali Trip Itinerary (21st - 27th Feb 2025)</h1>
+    </header>
+    <div class="container">
+        <!-- Day 0 -->
+        <div class="day" id="day0">
+            <h2>Day 0: 20th Feb 2025</h2>
+            <div class="task" id="task1">
+                <div class="info">
+                    <strong>Flight Details:</strong>
+                    <p>Vietjet Air VJ-884 (Partially refundable)</p>
+                    <p>Departure: Mumbai, Terminal 2 at 00:40 (Fri 21st Feb)</p>
+                    <p>Arrival: Ho Chi Minh City, Terminal 2 at 07:05 (Layover 2h 40m)</p>
+                    <strong>Time: </strong><input type="time" id="time1">
+                </div>
+                <button onclick="markCompleted('task1')">✔</button>
+            </div>
+            <div class="task" id="task2">
+                <div class="info">
+                    <p>Next Flight: Vietjet Air VJ-897 (Partially refundable)</p>
+                    <p>Departure: Ho Chi Minh City, Terminal 2 at 09:45</p>
+                    <p>Arrival: Bali, Denpasar Airport, Terminal 1 at 14:35</p>
+                    <strong>Time: </strong><input type="time" id="time2">
+                </div>
+                <button onclick="markCompleted('task2')">✔</button>
+            </div>
+            <button onclick="markDayCompleted('day0')">Day Completed</button>
         </div>
-        <button onclick="markCompleted('task0')">✔</button>
-    </div>
-    
-    <div class="task" id="task1">
-        <div class="info">
-            <p>Layover in Singapore</p>
-            <strong>Time: </strong><input type="time" id="time1">
-        </div>
-        <button onclick="markCompleted('task1')">✔</button>
-    </div>
-    
-    <div class="task" id="task2">
-        <div class="info">
-            <p>Flight Arrival in Bali</p>
-            <strong>Time: </strong><input type="time" id="time2">
-            <strong>Flight Details: </strong><input type="text" id="flightDetails2" placeholder="Enter flight details">
-        </div>
-        <button onclick="markCompleted('task2')">✔</button>
-    </div>
-    
-    <button onclick="markDayCompleted('day0')">Day Completed</button>
-</div>
 
-<!-- Day 1 -->
-<div class="day" id="day1">
-    <h2>Day 1: 22nd Feb 2025</h2>
-    <div class="task" id="task3">
-        <div class="info">
-            <p>Arrive in Bali</p>
-            <strong>Time: </strong><input type="time" id="time3">
+        <!-- Day 1 -->
+        <div class="day" id="day1">
+            <h2>Day 1: 21st Feb 2025</h2>
+            <div class="task" id="task3">
+                <div class="info">
+                    <p>Collect Baggage and leave airport</p>
+                    <strong>Time: </strong><input type="time" id="time3">
+                </div>
+                <button onclick="markCompleted('task3')">✔</button>
+            </div>
+            <div class="task" id="task4">
+                <div class="info">
+                    <p>Cab contact</p>
+                    <strong>Time: </strong><input type="time" id="time4">
+                </div>
+                <button onclick="markCompleted('task4')">✔</button>
+            </div>
+            <div class="task" id="task5">
+                <div class="info">
+                    <p>Check-in to Seminyak Beach Hideaway</p>
+                    <strong>Time: </strong><input type="time" id="time5">
+                </div>
+                <button onclick="markCompleted('task5')">✔</button>
+            </div>
+            <div class="task" id="task6">
+                <div class="info">
+                    <p>Scooter arrangement</p>
+                    <strong>Time: </strong><input type="time" id="time6">
+                </div>
+                <button onclick="markCompleted('task6')">✔</button>
+            </div>
+            <div class="task" id="task7">
+                <div class="info">
+                    <p>Sim card</p>
+                    <strong>Time: </strong><input type="time" id="time7">
+                </div>
+                <button onclick="markCompleted('task7')">✔</button>
+            </div>
+            <div class="task" id="task8">
+                <div class="info">
+                    <p>Currency exchange ($300)</p>
+                    <strong>Time: </strong><input type="time" id="time8">
+                </div>
+                <button onclick="markCompleted('task8')">✔</button>
+            </div>
+            <div class="task" id="task9">
+                <div class="info">
+                    <p>Go to flea market and shopping</p>
+                    <strong>Time: </strong><input type="time" id="time9">
+                </div>
+                <button onclick="markCompleted('task9')">✔</button>
+            </div>
+            <button onclick="markDayCompleted('day1')">Day Completed</button>
         </div>
-        <button onclick="markCompleted('task3')">✔</button>
-    </div>
-    <div class="task" id="task4">
-        <div class="info">
-            <p>Check-in at Hotel</p>
-            <strong>Time: </strong><input type="time" id="time4">
-        </div>
-        <button onclick="markCompleted('task4')">✔</button>
-    </div>
-    <button onclick="markDayCompleted('day1')">Day Completed</button>
-</div>
 
-<!-- Day 2 -->
-<div class="day" id="day2">
-    <h2>Day 2: 23rd Feb 2025</h2>
-    <div class="task" id="task5">
-        <div class="info">
-            <p>Breakfast at the Hotel</p>
-            <strong>Time: </strong><input type="time" id="time5">
+        <!-- Day 2 -->
+        <div class="day" id="day2">
+            <h2>Day 2: 22nd Feb 2025</h2>
+            <div class="task" id="task10">
+                <div class="info">
+                    <p>GWK park (Reach by 8:30 AM, spend 2-3 hours)</p>
+                    <strong>Time: </strong><input type="time" id="time10">
+                </div>
+                <button onclick="markCompleted('task10')">✔</button>
+            </div>
+            <div class="task" id="task11">
+                <div class="info">
+                    <p>Tanah Barak Cliff road (Spend 30 minutes)</p>
+                    <strong>Time: </strong><input type="time" id="time11">
+                </div>
+                <button onclick="markCompleted('task11')">✔</button>
+            </div>
+            <div class="task" id="task12">
+                <div class="info">
+                    <p>Lunch</p>
+                    <strong>Time: </strong><input type="time" id="time12">
+                </div>
+                <button onclick="markCompleted('task12')">✔</button>
+            </div>
+            <div class="task" id="task13">
+                <div class="info">
+                    <p>180 Day Club (Spend 2-3 hours)</p>
+                    <strong>Time: </strong><input type="time" id="time13">
+                </div>
+                <button onclick="markCompleted('task13')">✔</button>
+            </div>
+            <div class="task" id="task14">
+                <div class="info">
+                    <p>Suluban beach</p>
+                    <strong>Time: </strong><input type="time" id="time14">
+                </div>
+                <button onclick="markCompleted('task14')">✔</button>
+            </div>
+            <div class="task" id="task15">
+                <div class="info">
+                    <p>Uluwatu temple & enjoy sunset</p>
+                    <strong>Time: </strong><input type="time" id="time15">
+                </div>
+                <button onclick="markCompleted('task15')">✔</button>
+            </div>
+            <div class="task" id="task16">
+                <div class="info">
+                    <p>Kecak fire dance booking</p>
+                    <strong>Time: </strong><input type="time" id="time16">
+                </div>
+                <button onclick="markCompleted('task16')">✔</button>
+            </div>
+            <div class="task" id="task17">
+                <div class="info">
+                    <p>Dinner @ Menega Cafe</p>
+                    <strong>Time: </strong><input type="time" id="time17">
+                </div>
+                <button onclick="markCompleted('task17')">✔</button>
+            </div>
+            <button onclick="markDayCompleted('day2')">Day Completed</button>
         </div>
-        <button onclick="markCompleted('task5')">✔</button>
-    </div>
-    <div class="task" id="task6">
-        <div class="info">
-            <p>Visit Bali Safari Park</p>
-            <strong>Time: </strong><input type="time" id="time6">
-        </div>
-        <button onclick="markCompleted('task6')">✔</button>
-    </div>
-    <button onclick="markDayCompleted('day2')">Day Completed</button>
-</div>
 
-<!-- Day 3 -->
+     <!-- Day 3 -->
 <div class="day" id="day3">
-    <h2>Day 3: 24th Feb 2025</h2>
-
+    <h2>Day 3: 23rd Feb 2025</h2>
     <div class="task" id="task18">
         <div class="info">
-            <p>Instagram Bali Tour</p>
+            <p>Bali Safari and Marine Park</p>
             <strong>Time: </strong><input type="time" id="time18">
         </div>
         <button onclick="markCompleted('task18')">✔</button>
     </div>
-
     <div class="task" id="task19">
         <div class="info">
-            <p>TIS Cafe Near Alas Haram Rice Terrace</p>
+            <p>Lunch @ park</p>
             <strong>Time: </strong><input type="time" id="time19">
         </div>
         <button onclick="markCompleted('task19')">✔</button>
     </div>
-
     <div class="task" id="task20">
         <div class="info">
-            <p>FINNS Club</p>
+            <p>Visit Elephant Safari Park</p>
             <strong>Time: </strong><input type="time" id="time20">
         </div>
         <button onclick="markCompleted('task20')">✔</button>
     </div>
-
-    <button onclick="markDayCompleted('day3')">Day Completed</button>
-</div>
-<!-- Day 4 -->
-<div class="day" id="day4">
-    <h2>Day 4: 25th Feb 2025</h2>
-
     <div class="task" id="task21">
         <div class="info">
-            <p>Departure from Hotel (2:30 AM)</p>
+            <p>Explore Ubud Market</p>
             <strong>Time: </strong><input type="time" id="time21">
         </div>
         <button onclick="markCompleted('task21')">✔</button>
     </div>
-
     <div class="task" id="task22">
         <div class="info">
-            <p>Mount Batur Sunrise Jeep Tour</p>
+            <p>Visit Ubud Monkey Forest</p>
             <strong>Time: </strong><input type="time" id="time22">
         </div>
         <button onclick="markCompleted('task22')">✔</button>
     </div>
-
     <div class="task" id="task23">
         <div class="info">
-            <p>Coffee Making and Testing at Alas Haram</p>
+            <p>Dinner at Café Wayan</p>
             <strong>Time: </strong><input type="time" id="time23">
         </div>
         <button onclick="markCompleted('task23')">✔</button>
     </div>
+    <button onclick="markDayCompleted('day3')">Day Completed</button>
+</div>
 
+<!-- Day 4 -->
+<div class="day" id="day4">
+    <h2>Day 4: 24th Feb 2025</h2>
     <div class="task" id="task24">
         <div class="info">
-            <p>Anniversary Dinner at The Breeze @ Samaya (6:30 PM)</p>
+            <p>Visit Tegallalang Rice Terraces</p>
             <strong>Time: </strong><input type="time" id="time24">
         </div>
         <button onclick="markCompleted('task24')">✔</button>
     </div>
-
-    <button onclick="markDayCompleted('day4')">Day Completed</button>
-</div>
-<!-- Day 5 -->
-<div class="day" id="day5">
-    <h2>Day 5: 26th Feb 2025</h2>
-
     <div class="task" id="task25">
         <div class="info">
-            <p>Arrival at Airport</p>
+            <p>Explore Sacred Monkey Forest Sanctuary</p>
             <strong>Time: </strong><input type="time" id="time25">
         </div>
         <button onclick="markCompleted('task25')">✔</button>
     </div>
-
     <div class="task" id="task26">
         <div class="info">
-            <p>Cab to Hotel</p>
+            <p>Lunch at Ubud</p>
             <strong>Time: </strong><input type="time" id="time26">
         </div>
         <button onclick="markCompleted('task26')">✔</button>
     </div>
-
     <div class="task" id="task27">
         <div class="info">
-            <p>Relax at Hotel</p>
+            <p>Go for Traditional Dance Show</p>
             <strong>Time: </strong><input type="time" id="time27">
         </div>
         <button onclick="markCompleted('task27')">✔</button>
     </div>
-
-    <button onclick="markDayCompleted('day5')">Day Completed</button>
-</div>
-<!-- Day 6 -->
-<div class="day" id="day6">
-    <h2>Day 6: 27th Feb 2025</h2>
-
     <div class="task" id="task28">
         <div class="info">
-            <p>Departure to Airport</p>
+            <p>Dinner @ Bebek Tepi Sawah</p>
             <strong>Time: </strong><input type="time" id="time28">
         </div>
         <button onclick="markCompleted('task28')">✔</button>
     </div>
+    <button onclick="markDayCompleted('day4')">Day Completed</button>
+</div>
 
+<!-- Day 5 -->
+<div class="day" id="day5">
+    <h2>Day 5: 25th Feb 2025</h2>
+    <div class="task" id="task29">
+        <div class="info">
+            <p>Visit Sacred Water Temple</p>
+            <strong>Time: </strong><input type="time" id="time29">
+        </div>
+        <button onclick="markCompleted('task29')">✔</button>
+    </div>
+    <div class="task" id="task30">
+        <div class="info">
+            <p>Explore Besakih Temple</p>
+            <strong>Time: </strong><input type="time" id="time30">
+        </div>
+        <button onclick="markCompleted('task30')">✔</button>
+    </div>
+    <div class="task" id="task31">
+        <div class="info">
+            <p>Lunch at local restaurant</p>
+            <strong>Time: </strong><input type="time" id="time31">
+        </div>
+        <button onclick="markCompleted('task31')">✔</button>
+    </div>
+    <div class="task" id="task32">
+        <div class="info">
+            <p>Visit Kintamani Volcano</p>
+            <strong>Time: </strong><input type="time" id="time32">
+        </div>
+        <button onclick="markCompleted('task32')">✔</button>
+    </div>
+    <div class="task" id="task33">
+        <div class="info">
+            <p>Explore Tirta Empul Temple</p>
+            <strong>Time: </strong><input type="time" id="time33">
+        </div>
+        <button onclick="markCompleted('task33')">✔</button>
+    </div>
+    <div class="task" id="task34">
+        <div class="info">
+            <p>Dinner @ Jimbaran Bay</p>
+            <strong>Time: </strong><input type="time" id="time34">
+        </div>
+        <button onclick="markCompleted('task34')">✔</button>
+    </div>
+    <button onclick="markDayCompleted('day5')">Day Completed</button>
+</div>
+
+<!-- Day 6 -->
+<div class="day" id="day6">
+    <h2>Day 6: 26th Feb 2025</h2>
+    <div class="task" id="task35">
+        <div class="info">
+            <p>Visit Uluwatu Temple</p>
+            <strong>Time: </strong><input type="time" id="time35">
+        </div>
+        <button onclick="markCompleted('task35')">✔</button>
+    </div>
+    <div class="task" id="task36">
+        <div class="info">
+            <p>Explore Padang Padang Beach</p>
+            <strong>Time: </strong><input type="time" id="time36">
+        </div>
+        <button onclick="markCompleted('task36')">✔</button>
+    </div>
+    <div class="task" id="task37">
+        <div class="info">
+            <p>Lunch at the beach</p>
+            <strong>Time: </strong><input type="time" id="time37">
+        </div>
+        <button onclick="markCompleted('task37')">✔</button>
+    </div>
+    <div class="task" id="task38">
+        <div class="info">
+            <p>Relaxing Spa Treatment</p>
+            <strong>Time: </strong><input type="time" id="time38">
+        </div>
+        <button onclick="markCompleted('task38')">✔</button>
+    </div>
+    <div class="task" id="task39">
+        <div class="info">
+            <p>Go for Sunset at Tanah Lot</p>
+            <strong>Time: </strong><input type="time" id="time39">
+        </div>
+        <button onclick="markCompleted('task39')">✔</button>
+    </div>
+    <div class="task" id="task40">
+        <div class="info">
+            <p>Dinner @ Menega Seafood</p>
+            <strong>Time: </strong><input type="time" id="time40">
+        </div>
+        <button onclick="markCompleted('task40')">✔</button>
+    </div>
     <button onclick="markDayCompleted('day6')">Day Completed</button>
 </div>
 
+<!-- Day 7 -->
+<div class="day" id="day7">
+    <h2>Day 7: 27th Feb 2025</h2>
+    <div class="task" id="task41">
+        <div class="info">
+            <p>Final Day Relaxation at Hotel</p>
+            <strong>Time: </strong><input type="time" id="time41">
+        </div>
+        <button onclick="markCompleted('task41')">✔</button>
+    </div>
+    <div class="task" id="task42">
+        <div class="info">
+            <p>Check-out from Seminyak Beach Hideaway</p>
+            <strong>Time: </strong><input type="time" id="time42">
+        </div>
+        <button onclick="markCompleted('task42')">✔</button>
+    </div>
+    <div class="task" id="task43">
+        <div class="info">
+            <p>Travel to Airport</p>
+            <strong>Time: </strong><input type="time" id="time43">
+        </div>
+        <button onclick="markCompleted('task43')">✔</button>
+    </div>
+    <div class="task" id="task44">
+        <div class="info">
+            <p>Flight back to Mumbai</p>
+            <strong>Time: </strong><input type="time" id="time44">
+        </div>
+        <button onclick="markCompleted('task44')">✔</button>
+    </div>
+    <button onclick="markDayCompleted('day7')">Day Completed</button>
+</div>
