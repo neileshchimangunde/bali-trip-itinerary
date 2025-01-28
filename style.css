@@ -1,63 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    padding: 20px;
-}
-
-.day {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    background: #f9f9f9;
-}
-
-.task {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fff;
-}
-
-.task.completed {
-    background: #ffcccc;
-}
-
-button {
-    padding: 5px 10px;
+/* Add styles to highlight completed tasks */
+.task button {
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
+    font-size: 20px;
     cursor: pointer;
-    background: #007bff;
-    color: #fff;
 }
 
-button:hover {
-    background: #0056b3;
+.task button.completed {
+    background-color: lightgreen;
 }
 
-button:active {
-    background: #004085;
+/* Highlight completed events */
+.task.completed {
+    background-color: #f8d7da; /* Light red */
+    color: lightgrey; /* Text color for completed events */
 }
 
-input[type="time"] {
-    padding: 5px;
-    margin-left: 10px;
+/* Day Completed Button Styling */
+.day button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-button.selected {
-    background: #28a745;
+.day button.completed {
+    background-color: #6c757d; /* Greyed out if the day is completed */
 }
 
-button.selected:hover {
-    background: #218838;
+.day button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Change task text color when completed */
+.completed p {
+    text-decoration: line-through;
+    color: lightgrey;
 }
