@@ -1,0 +1,5 @@
+.task.completed {
+    background: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    text-decoration: line-through; /* Strikethrough text */
+}
