@@ -3,103 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bali Trip Itinerary</title>
+    <title>Bali Trip Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bali Trip Itinerary (21st - 27th Feb 2025)</h1>
-    </header>
-    <div class="container">
-        <!-- Day 0 -->
-        <div class="day">
-            <h2>Day 0: 20th Feb 2025</h2>
-            <div class="task" id="task1">
-                <div class="info">
-                    <strong>Flight Details:</strong>
-                    <p>Vietjet Air VJ-884 (Partially refundable)</p>
-                    <p>Departure: Mumbai, Terminal 2 at 00:40 (Fri 21st Feb)</p>
-                    <p>Arrival: Ho Chi Minh City, Terminal 2 at 07:05 (Layover 2h 40m)</p>
-                    <p>Next Flight: Vietjet Air VJ-897 (Partially refundable)</p>
-                    <p>Departure: Ho Chi Minh City, Terminal 2 at 09:45</p>
-                    <p>Arrival: Bali, Denpasar Airport, Terminal 1 at 14:35</p>
-                </div>
-                <button onclick="markCompleted('task1')">✔</button>
-            </div>
-        </div>
 
-        <!-- Day 1 -->
-        <div class="day">
-            <h2>Day 1: 21st Feb 2025</h2>
-            <div class="task"><p>Collect Baggage and leave airport</p></div>
-            <div class="task"><p>Cab contact</p></div>
-            <div class="task"><p>Check-in to Seminyak Beach Hideaway</p></div>
-            <div class="task"><p>Scooter arrangement</p></div>
-            <div class="task"><p>Sim card</p></div>
-            <div class="task"><p>Currency exchange ($300)</p></div>
-            <div class="task"><p>Go to flea market and shopping</p></div>
-            <button onclick="markDayCompleted('day1')">Day Completed</button>
-        </div>
+<header>
+    <h1>Bali Trip Planner</h1>
+</header>
 
-        <!-- Day 2 -->
-        <div class="day">
-            <h2>Day 2: 22nd Feb 2025</h2>
-            <div class="task"><p>GWK park</p></div>
-            <div class="task"><p>Tanah Barak Cliff road</p></div>
-            <div class="task"><p>Lunch</p></div>
-            <div class="task"><p>180 Day Club</p></div>
-            <div class="task"><p>Suluban beach</p></div>
-            <div class="task"><p>Uluwatu temple & enjoy sunset</p></div>
-            <div class="task"><p>Kecak fire dance booking</p></div>
-            <div class="task"><p>Dinner @ Menega Cafe</p></div>
-            <button onclick="markDayCompleted('day2')">Day Completed</button>
+<div class="container">
+    <!-- Day 0 -->
+    <div class="day" id="day0">
+        <h2>Day 0 - Arrival</h2>
+        <div class="task">
+            <span>Arrival in Bali</span>
+            <button onclick="markCompleted(this)">✔</button>
         </div>
-
-        <!-- Day 3 -->
-        <div class="day">
-            <h2>Day 3: 23rd Feb 2025</h2>
-            <div class="task"><p>Instagram Bali Tour</p></div>
-            <div class="task"><p>Visit TIS Cafe at Alas Garam</p></div>
-            <div class="task"><p>Visit FINNS Club in the evening</p></div>
-            <button onclick="markDayCompleted('day3')">Day Completed</button>
-        </div>
-
-        <!-- Day 4 -->
-        <div class="day">
-            <h2>Day 4: 24th Feb 2025</h2>
-            <div class="task"><p>Mount Batur Sunrise Jeep Tour (Pickup at 2:30 AM)</p></div>
-            <div class="task"><p>Visit Cretya Day Club</p></div>
-            <div class="task"><p>Coffee making and tasting at Alas Haram/Cretya</p></div>
-            <div class="task"><p>Anniversary dinner at Breeze by Samara</p></div>
-            <button onclick="markDayCompleted('day4')">Day Completed</button>
-        </div>
-
-        <!-- Day 5 -->
-        <div class="day">
-            <h2>Day 5: 25th Feb 2025</h2>
-            <div class="task"><p>Day tour to Nusa Penida Island</p></div>
-            <div class="task"><p>Snorkeling</p></div>
-            <div class="task"><p>Arrange scooter for next day’s ATV ride</p></div>
-            <div class="task"><p>Massage therapy</p></div>
-            <button onclick="markDayCompleted('day5')">Day Completed</button>
-        </div>
-
-        <!-- Day 6 -->
-        <div class="day">
-            <h2>Day 6: 26th Feb 2025</h2>
-            <div class="task"><p>Day tour: ATV Ride & River Rafting</p></div>
-            <button onclick="markDayCompleted('day6')">Day Completed</button>
-        </div>
-
-        <!-- Day 7 -->
-        <div class="day">
-            <h2>Day 7: 27th Feb 2025</h2>
-            <div class="task"><p>Final Day Relaxation at Hotel</p></div>
-            <div class="task"><p>Check-out from Seminyak Beach Hideaway</p></div>
-            <div class="task"><p>Travel to Airport</p></div>
-            <div class="task"><p>Flight back to Mumbai</p></div>
-            <button onclick="markDayCompleted('day7')">Day Completed</button>
+        <div class="task">
+            <span>Hotel Check-in</span>
+            <button onclick="markCompleted(this)">✔</button>
         </div>
     </div>
+
+    <!-- Day 1 -->
+    <div class="day" id="day1">
+        <h2>Day 1 - Exploring Ubud</h2>
+        <div class="task">
+            <span>Visit Tegallalang Rice Terrace</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Explore Ubud Monkey Forest</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day" id="day2">
+        <h2>Day 2 - Beaches & Temples</h2>
+        <div class="task">
+            <span>Visit Uluwatu Temple</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Relax at Padang Padang Beach</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+    <!-- Day 3 (Updated Events) -->
+    <div class="day" id="day3">
+        <h2>Day 3 - Instagram Bali Tour</h2>
+        <div class="task">
+            <span>Instagram Bali Tour 23rd Feb 2025</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Visit TIS Cafe at Alas Garam</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Evening at FINNS Club</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+    <!-- Day 4 (Updated Events) -->
+    <div class="day" id="day4">
+        <h2>Day 4 - Mount Batur Jeep Tour</h2>
+        <div class="task">
+            <span>Pickup from hotel at 2:30 AM</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Visit Cretya Day Club</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Coffee Making & Tasting at Alas Haram/Cretya</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Anniversary Dinner at Breeze by Samara</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+    <!-- Day 5 (Updated Events) -->
+    <div class="day" id="day5">
+        <h2>Day 5 - Nusa Penida Island Tour</h2>
+        <div class="task">
+            <span>Snorkeling at Nusa Penida</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Arrange Scooter for Next Day</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+        <div class="task">
+            <span>Massage Therapy</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+    <!-- Day 6 (Updated Events) -->
+    <div class="day" id="day6">
+        <h2>Day 6 - Adventure Day</h2>
+        <div class="task">
+            <span>ATV Ride & River Rafting</span>
+            <button onclick="markCompleted(this)">✔</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
