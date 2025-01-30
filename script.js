@@ -1,7 +1,8 @@
-function markCompleted(taskElement) {
+function markCompleted(button) {
+    const taskElement = button.parentElement;
     taskElement.classList.toggle("completed");
-    taskElement.querySelector("button").classList.toggle("selected");
-    
+    button.classList.toggle("selected");
+
     checkDayCompletion(taskElement.closest('.day'));
 }
 
