@@ -1,17 +1,17 @@
-function markCompleted(taskId) {
-    const taskElement = document.getElementById(taskId);
-    const button = taskElement.querySelector("button");
-    button.classList.toggle("selected");
+function markCompleted(taskElement) {
     taskElement.classList.toggle("completed");
+    taskElement.querySelector("button").classList.toggle("selected");
+    
+    checkDayCompletion(taskElement.closest('.day'));
 }
 
-function markDayCompleted(dayId) {
-    const dayElement = document.querySelector(`#${dayId}`);
-    if (dayElement) {
-        const tasks = dayElement.querySelectorAll('.task');
-        tasks.forEach(task => {
-            task.classList.add('completed');
-            task.querySelector("button").classList.add("selected");
-        });
+function checkDayCompletion(dayElement) {
+    const tasks = dayElement.querySelectorAll('.task');
+    const allCompleted = Array.from(tasks).every(task => task.classList.contains('completed'));
+
+    if (allCompleted) {
+        dayElement.classList.add("day-completed");
+    } else {
+        dayElement.classList.remove("day-completed");
     }
 }
