@@ -38,6 +38,7 @@ h1 {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .day h2 {
@@ -77,18 +78,7 @@ h1 {
     background-color: #218838;
 }
 
-button {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #ff4a3d;
+/* When all tasks in a day are completed */
+.day-completed {
+    background-color: #c3e6cb !important;
 }
