@@ -5,130 +5,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bali Trip Itinerary</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Bali Trip Itinerary (20th - 27th Feb 2025)</h1>
+        <h1>Bali Trip Itinerary (21st - 27th Feb 2025)</h1>
     </header>
     <div class="container">
-        
         <!-- Day 0 -->
         <div class="day" id="day0">
-            <h2>Day 0: 20th Feb 2025 - Departure</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Flight Details: Vietjet Air VJ-884</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Flight from Mumbai to Bali with layover in Ho Chi Minh City.</p>
-                    <p><strong>Arrival Time:</strong> 14:35 (Bali Time)</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Denpasar+Airport" target="_blank">Denpasar Airport</a></p>
+            <h2>Day 0: 20th Feb 2025</h2>
+            <div class="task" id="task1">
+                <div class="task-title" onclick="toggleDetails('details1')">
+                    <strong>Flight Details</strong>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <div class="task-details" id="details1">
+                    <p><strong>Vietjet Air VJ-884 (Partially refundable)</strong></p>
+                    <p>Departure: Mumbai, Terminal 2 at 00:40 (Fri 21st Feb)</p>
+                    <p>Arrival: Ho Chi Minh City, Terminal 2 at 07:05 (Layover 2h 40m)</p>
+                    <p><strong>Next Flight: Vietjet Air VJ-897 (Partially refundable)</strong></p>
+                    <p>Departure: Ho Chi Minh City, Terminal 2 at 09:45</p>
+                    <p>Arrival: Bali, Denpasar Airport, Terminal 1 at 14:35</p>
+                </div>
+                <button onclick="markCompleted('task1')">✔</button>
             </div>
         </div>
 
         <!-- Day 1 -->
         <div class="day" id="day1">
-            <h2>Day 1: 21st Feb 2025 - Arrival & Setup</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Check-in to Seminyak Beach Hideaway</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Stay at a luxurious beachfront villa with private pool.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Seminyak+Beach+Hideaway" target="_blank">Seminyak Beach Hideaway</a></p>
-                </div>
-                <button onclick="markCompleted(this)">✔</button>
+            <h2>Day 1: 21st Feb 2025</h2>
+            <div class="task" id="task2">
+                <div class="task-title" onclick="toggleDetails('details2')">Collect Baggage and leave airport</div>
+                <div class="task-details" id="details2">No additional details.</div>
+                <button onclick="markCompleted('task2')">✔</button>
+            </div>
+            <div class="task" id="task3">
+                <div class="task-title" onclick="toggleDetails('details3')">Cab Contact</div>
+                <div class="task-details" id="details3"><p>Cab pickup arranged from the airport.</p></div>
+                <button onclick="markCompleted('task3')">✔</button>
+            </div>
+            <div class="task" id="task4">
+                <div class="task-title" onclick="toggleDetails('details4')">Check-in to Seminyak Beach Hideaway</div>
+                <div class="task-details" id="details4"><p>Hotel reservation confirmed.</p></div>
+                <button onclick="markCompleted('task4')">✔</button>
             </div>
         </div>
 
         <!-- Day 2 -->
         <div class="day" id="day2">
-            <h2>Day 2: 22nd Feb 2025 - Uluwatu & Beach Day</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">GWK Park</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Cultural park featuring the massive Garuda Wisnu Kencana statue.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=GWK+Park" target="_blank">GWK Park</a></p>
+            <h2>Day 2: 22nd Feb 2025</h2>
+            <div class="task" id="task5">
+                <div class="task-title" onclick="toggleDetails('details5')">GWK Park</div>
+                <div class="task-details" id="details5">
+                    <p>Description: Visit the famous cultural park.</p>
+                    <p>Location: <a href="#">Google Maps</a></p>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <button onclick="markCompleted('task5')">✔</button>
             </div>
         </div>
 
         <!-- Day 3 -->
         <div class="day" id="day3">
-            <h2>Day 3: 23rd Feb 2025 - Instagram Bali Tour</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Visit TIS Cafe at Alas Garam</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Popular cafe with stunning views and delicious food.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=TIS+Cafe" target="_blank">TIS Cafe</a></p>
+            <h2>Day 3: 23rd Feb 2025</h2>
+            <div class="task" id="task6">
+                <div class="task-title" onclick="toggleDetails('details6')">Instagram Bali Tour</div>
+                <div class="task-details" id="details6">
+                    <p>Description: Full-day tour of Instagram-worthy locations.</p>
+                    <p>Location: <a href="#">Google Maps</a></p>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
-            </div>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Visit FINNS Club</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> A premium beach club for relaxation and entertainment.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=FINNS+Club" target="_blank">FINNS Club</a></p>
-                </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <button onclick="markCompleted('task6')">✔</button>
             </div>
         </div>
 
         <!-- Day 4 -->
         <div class="day" id="day4">
-            <h2>Day 4: 24th Feb 2025 - Mount Batur Adventure</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Mount Batur Sunrise Jeep Tour</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Early morning tour to witness a breathtaking sunrise.</p>
-                    <p><strong>Pickup Time:</strong> 2:30 AM</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Mount+Batur" target="_blank">Mount Batur</a></p>
+            <h2>Day 4: 24th Feb 2025</h2>
+            <div class="task" id="task7">
+                <div class="task-title" onclick="toggleDetails('details7')">Mount Batur Sunrise Jeep Tour</div>
+                <div class="task-details" id="details7">
+                    <p>Pickup Time: 2:30 AM</p>
+                    <p>Location: <a href="#">Google Maps</a></p>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <button onclick="markCompleted('task7')">✔</button>
             </div>
         </div>
 
         <!-- Day 5 -->
         <div class="day" id="day5">
-            <h2>Day 5: 25th Feb 2025 - Nusa Penida Tour</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Snorkeling in Nusa Penida</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Explore the marine beauty of Bali’s waters.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Nusa+Penida" target="_blank">Nusa Penida</a></p>
+            <h2>Day 5: 25th Feb 2025</h2>
+            <div class="task" id="task8">
+                <div class="task-title" onclick="toggleDetails('details8')">Day tour to Nusa Penida Island</div>
+                <div class="task-details" id="details8">
+                    <p>Description: Explore the stunning island.</p>
+                    <p>Location: <a href="#">Google Maps</a></p>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <button onclick="markCompleted('task8')">✔</button>
             </div>
         </div>
 
         <!-- Day 6 -->
         <div class="day" id="day6">
-            <h2>Day 6: 26th Feb 2025 - ATV Ride & River Rafting</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">ATV Ride & River Rafting</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Thrilling adventure through Bali’s scenic landscapes.</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Bali+Rafting" target="_blank">Bali Rafting</a></p>
+            <h2>Day 6: 26th Feb 2025</h2>
+            <div class="task" id="task9">
+                <div class="task-title" onclick="toggleDetails('details9')">ATV Ride & River Rafting</div>
+                <div class="task-details" id="details9">
+                    <p>Description: Enjoy adventure sports.</p>
+                    <p>Location: <a href="#">Google Maps</a></p>
                 </div>
-                <button onclick="markCompleted(this)">✔</button>
+                <button onclick="markCompleted('task9')">✔</button>
             </div>
         </div>
 
         <!-- Day 7 -->
         <div class="day" id="day7">
-            <h2>Day 7: 27th Feb 2025 - Departure</h2>
-            <div class="task">
-                <span class="task-title" onclick="toggleDetails(this)">Flight Back to Mumbai</span>
-                <div class="task-details">
-                    <p><strong>Description:</strong> Return flight to Mumbai, ending the Bali adventure.</p>
-                    <p><strong>Departure Time:</strong> TBD</p>
-                    <p><strong>Location:</strong> <a href="https://maps.google.com/?q=Denpasar+Airport" target="_blank">Denpasar Airport</a></p>
-                </div>
-                <button onclick="markCompleted(this)">✔</button>
+            <h2>Day 7: 27th Feb 2025</h2>
+            <div class="task" id="task10">
+                <div class="task-title" onclick="toggleDetails('details10')">Final Day Relaxation at Hotel</div>
+                <div class="task-details" id="details10"><p>Enjoy the last day before departure.</p></div>
+                <button onclick="markCompleted('task10')">✔</button>
             </div>
         </div>
-        
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
