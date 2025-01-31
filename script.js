@@ -1,22 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const taskHeaders = document.querySelectorAll(".task span");
+function markCompleted(event, button) {
+    // Prevent parent div click when button is clicked
+    event.stopPropagation();
 
-    taskHeaders.forEach(header => {
-        header.addEventListener("click", function () {
-            const descriptionBox = this.nextElementSibling.nextElementSibling;
-            if (descriptionBox) {
-                descriptionBox.classList.toggle("visible");
-            }
-        });
-    });
-});
-
-function markCompleted(button) {
     const taskElement = button.parentElement;
     taskElement.classList.toggle("completed");
     button.classList.toggle("selected");
 
     checkDayCompletion(taskElement.closest('.day'));
+}
+
+function toggleDetails(taskElement) {
+    const description = taskElement.querySelector('.description');
+    description.classList.toggle('hidden');
 }
 
 function checkDayCompletion(dayElement) {
