@@ -1,21 +1,18 @@
 function markCompleted(button) {
     const taskElement = button.parentElement;
-    button.classList.toggle("selected");
     taskElement.classList.toggle("completed");
+    button.classList.toggle("selected");
 
-    // Check if all tasks in the day are completed
-    const dayElement = taskElement.closest(".day");
-    const allTasks = dayElement.querySelectorAll(".task");
-    const completedTasks = dayElement.querySelectorAll(".task.completed");
+    checkDayCompletion(taskElement.closest('.day'));
+}
 
-    if (allTasks.length === completedTasks.length) {
+function checkDayCompletion(dayElement) {
+    const tasks = dayElement.querySelectorAll('.task');
+    const allCompleted = Array.from(tasks).every(task => task.classList.contains('completed'));
+
+    if (allCompleted) {
         dayElement.classList.add("day-completed");
     } else {
         dayElement.classList.remove("day-completed");
     }
-}
-
-function toggleDetails(titleElement) {
-    const taskDetails = titleElement.nextElementSibling;
-    taskDetails.classList.toggle("show-details");
 }
