@@ -1,3 +1,4 @@
+
 function markCompleted(button) {
     const taskElement = button.parentElement;
     taskElement.classList.toggle("completed");
