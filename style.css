@@ -55,6 +55,7 @@ h1 {
     margin: 10px 0;
     background-color: #f9f9f9;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -76,6 +77,30 @@ h1 {
 
 .task button.selected {
     background-color: #218838;
+}
+
+/* Description box */
+.description {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.description.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* When all tasks in a day are completed */
