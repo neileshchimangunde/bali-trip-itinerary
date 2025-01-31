@@ -1,17 +1,9 @@
-function markCompleted(event, button) {
-    // Prevent parent div click when button is clicked
-    event.stopPropagation();
-
+function markCompleted(button) {
     const taskElement = button.parentElement;
     taskElement.classList.toggle("completed");
     button.classList.toggle("selected");
 
     checkDayCompletion(taskElement.closest('.day'));
-}
-
-function toggleDetails(taskElement) {
-    const description = taskElement.querySelector('.description');
-    description.classList.toggle('hidden');
 }
 
 function checkDayCompletion(dayElement) {
