@@ -18,16 +18,17 @@ function checkDayCompletion(dayElement) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const tasks = document.querySelectorAll('.task');
+    const tasks = document.querySelectorAll('.task span'); // Select only the text span
     const popup = document.getElementById('event-popup');
     const closeButton = document.querySelector('.close-button');
 
     tasks.forEach(task => {
         task.addEventListener('click', () => {
-            const description = task.getAttribute('data-description') || 'No description available';
-            const time = task.getAttribute('data-time') || 'N/A';
-            const mapsLink = task.getAttribute('data-maps') || '#';
-            const references = task.getAttribute('data-references') || 'No references available';
+            const parent = task.parentElement;
+            const description = parent.getAttribute('data-description') || 'No description available';
+            const time = parent.getAttribute('data-time') || 'N/A';
+            const mapsLink = parent.getAttribute('data-maps') || '#';
+            const references = parent.getAttribute('data-references') || 'No references available';
 
             document.getElementById('event-description').textContent = `Description: ${description}`;
             document.getElementById('event-time').textContent = `Time: ${time}`;
